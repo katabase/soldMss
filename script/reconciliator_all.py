@@ -211,7 +211,7 @@ def reconciliator():
         all_data = json.load(data)
 
     # Usefull if you don't want to try the script on all the data.
-    all_data = dict(list(all_data.items())[:2500])
+    #all_data = dict(list(all_data.items())[:2500])
 
     results_lists = double_loop(all_data)
 
@@ -232,6 +232,6 @@ def reconciliator():
 if __name__ == "__main__":
     results = reconciliator()
 
-    with open('reconciliated.json', 'w+') as outfile:
+    with open('../output/reconciliated.json', 'w+') as outfile:
         outfile.truncate(0)
         json.dump(results, outfile)
