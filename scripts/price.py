@@ -1,5 +1,6 @@
 import json
 import csv
+from operator import itemgetter
 
 def get_price(dict):
 	"""
@@ -55,28 +56,33 @@ def price_evolution(mss_dict):
 	:para mss_dict: the data of a manuscript, as a dict
 	:return: a dict containing data
 	"""
-	# This if the final dict.
+	# This is the final dict.
 	data = {}
 	# This list contains all prices, used for the average.
 	prices_list = []
-	# This list contains price and sell date of each sell, it's a list of dict.
+	# This list contains price and sell date of each sell, it's a list of dicts.
 	sales_list = []
 	for mss in mss_dict["mss"]:
 		id = mss["id"]
-		# This dict will contains two keys : the date and the price of the sell.
-		sales = {}
 		# The two entries are overwrite : it's ok because we only want to keep one id and one desc.
 		data["id"] = id
 		data["author"] = mss["author"]
 		data["desc"] = mss["desc"]
 		price = get_price(mss)
-		sales["date"] = mss["sell_date"]
-		sales["price"] = price
-		sales_list.append(sales)
+		date = mss["sell_date"]
+		# It's only usefull to retrive prices when we have both the price and the date.
+		if price and date is not None:
+			# This dict will contains two keys : the date and the price of the sell.
+			sales = {}
+			sales["price"] = price
+			sales["date"] = date
+			sales_list.append(sales)
 
 		if price is not None:
 			prices_list.append(price)
 
+	# Itemgetter is used to retrieve price by chronological order.
+	sales_list = sorted(sales_list, key=itemgetter('date'))
 	data["sales"] = sales_list
 
 	# Prices are sorted : the lowest to the highest.
