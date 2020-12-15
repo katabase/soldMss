@@ -31,15 +31,25 @@ If you want to cluster all the entries of `export.json`, try this :
 
 Now you can try some data analysis, being in the `scripts` folder :
 
-* about the price with `price.py`
-* about the authors with `author.py`
-* about the number of sales of each manuscript with `mss_list.py`
+* about the price with 
+```bash
+python3 price.py
+```
+
+* about the authors with 
+```bash
+python3 author.py
+```
+* about the number of sales of each manuscript with 
+```bash
+python3 mss_list.py
+```
 
 All the results will be in the `output`folder.
 
 ## Credits
 
-* The script was created by Alexandre Bartz with the help of Matthias Gille Levenson and Simon Gabay.
+* The scripts were created by Alexandre Bartz and Matthias Gille Levenson with the help of Simon Gabay.
 
 
 ## Cite this repository
