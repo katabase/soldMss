@@ -141,6 +141,7 @@ def double_loop(input_dict):
 
     # The final list contains the result of the whole comparison process, without filtering, sorted by score.
     final_list = []
+    print("Start filling the final_list")
     for key in output_dict1:
         first_entry = key.split("-")[0]
         second_entry = key.split("-")[1]
@@ -152,8 +153,10 @@ def double_loop(input_dict):
 
     # The filtered list removes all entries with a score lower or equal to 0.6
     sensibility = 0.6
+    print("Star filling the filtered_list_with_score")
     filtered_list_with_score = [[item[1], item[0]] for item in final_list if item[0] > sensibility and item[2] >= 0.4]
 
+    print("Start adding scores")
     desc_score = {}
     for (desc_a, desc_b), score in filtered_list_with_score:
     	if desc_a not in desc_score:
@@ -162,10 +165,12 @@ def double_loop(input_dict):
 
     # Now let's create the clusters. We transform the list of pairs into a graph. The connected nodes are our clusters !
     # See https://stackoverflow.com/a/4843408
+    print("Creation of the clusters")
     filtered_list = [item[0] for item in filtered_list_with_score]
     graphed_list = to_graph(filtered_list)
     cleaned_list = [list(item) for item in list(connected_components(graphed_list))]
 
+    print("Start filling the multiple_sales list")
     reconciliated_desc_list = []
     multiple_sales = []
     for item in cleaned_list:
@@ -183,7 +188,7 @@ def double_loop(input_dict):
     	multiple_sales.append(mss_group)
 
 
-
+    print("Start filling the single_sale_list")
     # We can now know which manuscripts are sold only once.
     single_sale_list = []
     for desc_id, desc in input_dict.items():
@@ -211,7 +216,7 @@ def reconciliator():
         all_data = json.load(data)
 
     # Usefull if you don't want to try the script on all the data.
-    #all_data = dict(list(all_data.items())[:2500])
+    all_data = dict(list(all_data.items())[:2500])
 
     results_lists = double_loop(all_data)
 
@@ -232,6 +237,6 @@ def reconciliator():
 if __name__ == "__main__":
     results = reconciliator()
 
-    with open('../output/reconciliated.json', 'w+') as outfile:
+    with open('../output/reconciliated2.json', 'w+') as outfile:
         outfile.truncate(0)
         json.dump(results, outfile)
