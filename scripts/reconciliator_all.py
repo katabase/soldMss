@@ -8,6 +8,11 @@ from networkx.algorithms.components.connected import connected_components
 import os
 import re
 
+import argparse
+arg_parser = argparse.ArgumentParser()
+arg_parser.add_argument("json_file", help="a JSON file containing data to cluster")
+args = arg_parser.parse_args()
+
 # https://stackoverflow.com/a/17388505
 def similar(a, b):
     """
@@ -201,22 +206,18 @@ def double_loop(input_dict):
 
 
 
-def reconciliator():
+def reconciliator(file_to_open):
     """
     This function is the main function used for queries.
     :param author: a string
     :return: a dict containing all results
     """
     final_results = {}
-    # Loading of all the data in JSON.
-    json_file = '../export.json'
-    actual_path = os.path.dirname(os.path.abspath(__file__))
-    file_to_open = os.path.join(actual_path, json_file)
     with open(file_to_open, 'r') as data:
         all_data = json.load(data)
 
     # Usefull if you don't want to try the script on all the data.
-    all_data = dict(list(all_data.items())[:2500])
+    #all_data = dict(list(all_data.items())[:2500])
 
     results_lists = double_loop(all_data)
 
@@ -235,7 +236,13 @@ def reconciliator():
 
 
 if __name__ == "__main__":
-    results = reconciliator()
+
+    # Loading of all the data in JSON.
+    json_file = args.json_file
+    actual_path = os.path.dirname(os.path.abspath(__file__))
+    file_to_open = os.path.join(actual_path, json_file)
+
+    results = reconciliator(file_to_open)
 
     with open('../output/reconciliated2.json', 'w+') as outfile:
         outfile.truncate(0)

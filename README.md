@@ -24,7 +24,7 @@ If you want to cluster all the entries of `export.json`, try this :
 * source my_env/bin/activate
 * pip install -r requirements.txt
 * cd scripts
-* python3 reconciliator_all.py
+* python3 reconciliator_all.py ../export.json
 ```
 
 *Note that the output file of this clustering is available [here](https://github.com/katabase/soldMss/blob/main/output/reconciliated.json).*
