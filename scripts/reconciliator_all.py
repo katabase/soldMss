@@ -1,6 +1,4 @@
 import json
-from functools import lru_cache
-
 import tqdm
 from difflib import SequenceMatcher
 import networkx
@@ -11,7 +9,6 @@ import re
 import argparse
 arg_parser = argparse.ArgumentParser()
 arg_parser.add_argument("json_file", help="a JSON file containing data to cluster")
-args = arg_parser.parse_args()
 
 # https://stackoverflow.com/a/17388505
 def similar(a, b):
@@ -56,6 +53,8 @@ def to_edges(l):
         last = current
 
 
+id_reg = re.compile("CAT_[0-9]+")
+
 def validate_id(id):
     """
     This function verifies that the id matches predefined filenames for security reasons.
@@ -63,7 +62,7 @@ def validate_id(id):
     :return: the validated id.
     """
     # Each file starts with 'CAT_' and digits.
-    good_id = re.match("CAT_[0-9]+", id)
+    good_id = id_reg.match(id)
     return good_id[0]
 
 
@@ -74,41 +73,36 @@ def similarity_score(desc_a, desc_b):
     :param desc_b: second desc to compare
     :return: the score
     """
-    def equals(field):
-        return desc_a[field] == desc_b[field]
 
     score = 0
-    # Desc of a same document are often strongly similar.
-    if similar(desc_b["desc"], desc_a["desc"]) > 0.75:
-        score = score + 0.3
-    else:
-        score = score - 0.2
-
-    if equals("term"):
+    if  desc_a["term"] == desc_b["term"]:
         score = score + 0.2
     else:
         score = score - 0.1
 
-    if equals("date") and desc_b["date"] is not None:
+    if  desc_a["date"] == desc_b["date"]and desc_b["date"] is not None:
         score = score + 0.5
     else:
-        score = score - 0.5
+        score = score - 0.1
 
-    if equals("number_of_pages"):
+    if  desc_a["number_of_pages"] == desc_b["number_of_pages"]:
         score = score + 0.1
     else:
         score = score - 0.1
 
-    if equals("format"):
-        score = score + 0.1
+    if  desc_a["format"] == desc_b["format"]:
+        score = score + 0.3
     else:
-        score = score - 0.3
+        score = score - 0.2
 
-    if equals("price"):
+    if  desc_a["price"] == desc_b["price"]:
         score = score + 0.1
     else:
         score = score - 0.1
-    
+
+    if score >= 0.5 and similar(desc_b["desc"], desc_a["desc"]) <= 0.75:
+        score = score - 0.2
+
     return score
 
 
@@ -132,12 +126,18 @@ def double_loop(input_dict):
             # To compare two entries of a same catalogue makes no sense.
             if CAT_id_a == CAT_id_b:
                 continue
-            # If there is a strong possibility that autors are not the same, we simply pass.
-            if desc_b["author"] and desc_a["author"] and similar(desc_b["author"], desc_a["author"]) < 0.75:
-                continue
+
             # This dict will contain the score and the author distance.
             score_entry = {}
             score_entry["score"] = similarity_score(desc_a, desc_b)
+
+            if score_entry["score"] <= 0.5:
+                continue
+
+            # If there is a strong possibility that autors are not the same, we simply pass.
+            if desc_b["author"] and desc_a["author"] and similar(desc_b["author"], desc_a["author"]) < 0.75:
+                continue
+
             try:
                 score_entry["author_distance"] = similar(desc_b["author"], desc_a["author"])
             except:
@@ -159,7 +159,7 @@ def double_loop(input_dict):
     # The filtered list removes all entries with a score lower or equal to 0.6
     sensibility = 0.6
     print("Star filling the filtered_list_with_score")
-    filtered_list_with_score = [[item[1], item[0]] for item in final_list if item[0] > sensibility and item[2] >= 0.4]
+    filtered_list_with_score = [[item[1], item[0]] for item in final_list if item[0] >= sensibility and item[2] >= 0.4]
 
     print("Start adding scores")
     desc_score = {}
@@ -173,7 +173,7 @@ def double_loop(input_dict):
     print("Creation of the clusters")
     filtered_list = [item[0] for item in filtered_list_with_score]
     graphed_list = to_graph(filtered_list)
-    cleaned_list = [list(item) for item in list(connected_components(graphed_list))]
+    cleaned_list = [list(sorted(item)) for item in list(sorted(connected_components(graphed_list)))]
 
     print("Start filling the multiple_sales list")
     reconciliated_desc_list = []
@@ -206,22 +206,20 @@ def double_loop(input_dict):
 
 
 
-def reconciliator(file_to_open):
+def reconciliator(data):
     """
     This function is the main function used for queries.
-    :param author: a string
+    :param data: a dict
     :return: a dict containing all results
     """
     final_results = {}
-    with open(file_to_open, 'r') as data:
-        all_data = json.load(data)
 
     # Usefull if you don't want to try the script on all the data.
     #all_data = dict(list(all_data.items())[:2500])
 
-    results_lists = double_loop(all_data)
+    results_lists = double_loop(data)
 
-    final_results["descs_processed"] = len(all_data)
+    final_results["descs_processed"] = len(data)
     final_results["mss_reconciliated"] = len(results_lists[2])
     final_results["single_sale_count"] = len(results_lists[0])
     final_results["multiple_sales_count"] = len(results_lists[3])
@@ -237,12 +235,15 @@ def reconciliator(file_to_open):
 
 if __name__ == "__main__":
 
+    args = arg_parser.parse_args()
+
     # Loading of all the data in JSON.
     json_file = args.json_file
     actual_path = os.path.dirname(os.path.abspath(__file__))
     file_to_open = os.path.join(actual_path, json_file)
-
-    results = reconciliator(file_to_open)
+    with open(file_to_open, 'r') as data:
+        all_data = json.load(data)
+        results = reconciliator(all_data)
 
     with open('../output/reconciliated2.json', 'w+') as outfile:
         outfile.truncate(0)
