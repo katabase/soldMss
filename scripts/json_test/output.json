@@ -1,0 +1,975 @@
+{
+    "descs_processed": 67,
+    "mss_reconciliated": 18,
+    "single_sale_count": 27,
+    "multiple_sales_count": 40,
+    "multiple_sales": [
+        {
+            "mss": [
+                {
+                    "price": 5.0,
+                    "author": "Montholon",
+                    "date": "1846",
+                    "number_of_pages": 3.0,
+                    "format": 8,
+                    "term": 7,
+                    "sell_date": "1874-05",
+                    "desc": "L. a. s. \u00e0 un journal ; citadelle de lam, 1846, 3 p. in-8.",
+                    "id": "CAT_000032_e84_d1"
+                },
+                {
+                    "price": 5.0,
+                    "author": "Montholon",
+                    "date": "1846",
+                    "number_of_pages": 3.0,
+                    "format": 8,
+                    "term": 7,
+                    "sell_date": "1881-01",
+                    "desc": "L. a. s. \u00e0 un journal ; citadelle de Ham, 1846, 3 p. in-8.",
+                    "id": "CAT_000054_e99_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000032_e84_d1",
+                    "CAT_000054_e99_d1",
+                    1.4999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 3.0,
+                    "author": "Cl\u00e9ment XII",
+                    "date": "1731",
+                    "number_of_pages": 1.0,
+                    "format": 1,
+                    "term": 4,
+                    "sell_date": "1879-12",
+                    "desc": "Belle pi\u00e8ce sig. Fiat motus p\u00b0 L; Rome, 1731, 1 p. in-f.",
+                    "id": "CAT_000048_e53_d1"
+                },
+                {
+                    "price": 3.0,
+                    "author": "Cl\u00e9ment XII",
+                    "date": "1731",
+                    "number_of_pages": 1.0,
+                    "format": 1,
+                    "term": 4,
+                    "sell_date": "1870-07",
+                    "desc": "-Belle pi\u00e8ce sig. Fiat motus p\u00b0 L; Rome, 1731 1 p. in-f.",
+                    "id": "CAT_000082_e85_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000048_e53_d1",
+                    "CAT_000082_e85_d1",
+                    1.4999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": null,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1697-05",
+                    "number_of_pages": 0.25,
+                    "format": 4,
+                    "term": 3,
+                    "sell_date": "1886-01",
+                    "desc": "Pi\u00e8ce de 3 lignes aut., mai 1697. 1/4 de p. in-4.",
+                    "id": "CAT_000099_e160_d1"
+                },
+                {
+                    "price": 75.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1697-05",
+                    "number_of_pages": 0.25,
+                    "format": 4,
+                    "term": 3,
+                    "sell_date": "1887-03",
+                    "desc": "Pi\u00e8ce de 3 lig. aut., mai 1697, 1/4 de p. in-4.",
+                    "id": "CAT_000107_e181_d1"
+                },
+                {
+                    "price": 75.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1697-05",
+                    "number_of_pages": 0.25,
+                    "format": 4,
+                    "term": 3,
+                    "sell_date": "1888-10",
+                    "desc": "Pi\u00e8ce de 3 lignes aut., mai 1697, 1/4 de p. in-4.",
+                    "id": "CAT_000118_e197_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000107_e181_d1",
+                    "CAT_000099_e160_d1",
+                    1.2999999999999998
+                ],
+                [
+                    "CAT_000118_e197_d1",
+                    "CAT_000107_e181_d1",
+                    1.4999999999999998
+                ],
+                [
+                    "CAT_000118_e197_d1",
+                    "CAT_000099_e160_d1",
+                    1.2999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 200.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1685-08-12",
+                    "number_of_pages": 3.0,
+                    "format": 4,
+                    "term": null,
+                    "sell_date": "1894-05",
+                    "desc": "Fin de lettre aut. \u00e0 sa fille Mme de Grignan; aux Rochers, 12 ao\u00fbt 1685, 3 p. in-4, suivie de 2 pages aut. d'Emmanuel de Coulanges.",
+                    "id": "CAT_000194_e207_d1"
+                },
+                {
+                    "price": 200.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1685-08-12",
+                    "number_of_pages": 3.0,
+                    "format": 4,
+                    "term": null,
+                    "sell_date": "1893-02",
+                    "desc": "Fin de lettre aut. \u00e0 sa fille Mme de Grignan; aux Rochers, 12 ao\u00fbt 1685, 3 p. in-4, suivie de 2 pages aut. d'Emmanuel de Coulanges.",
+                    "id": "CAT_000328_e265_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000194_e207_d1",
+                    "CAT_000328_e265_d1",
+                    1.4999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 200.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1644",
+                    "number_of_pages": 3.5,
+                    "format": 4,
+                    "term": 8,
+                    "sell_date": "1886-02",
+                    "desc": ". P. S., sign\u00e9e aussi par son mari Henri, marquis de S\u00e9vign\u00e9, Marie de L. a. Croix, veuve de Gabriel de Gu\u00e9n\u00e9gaud, Claude de Gu\u00e9n\u00e9gaud, tr\u00e9sorier du Roi, Philippe de Coulanges (oncle de Madame de S\u00e9vign\u00e9), L\u00e9onor de Rabutin, comte de Bussy, lieutenant-g\u00e9n\u00e9ral, et l'abb\u00e9 Christophe de Coulanges; Paris, 8 f\u00e9vrier 1644 et 30 janvier 1645, 3 p. 1/2 in-4. Tach\u00e9e d'humidit\u00e9 et raccommod\u00e9e.",
+                    "id": "CAT_000100_e280_d1"
+                },
+                {
+                    "price": 200.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1644",
+                    "number_of_pages": 3.5,
+                    "format": 4,
+                    "term": 8,
+                    "sell_date": "1887-03",
+                    "desc": "P. S., sign\u00e9e aussi par son mari Henri, marquis de S\u00e9vign\u00e9, Marie de L. a. Croix, veuve de Gabriel de Gu\u00e9n\u00e9gaud. Claude de Gu\u00e9n\u00e9gaud, tr\u00e9sorier du Roi, Philippe de Coulanges (oncle de Madame de S\u00e9vign\u00e9), L\u00e9onor de Rabutin, comte de Bussy, lieutenant-g\u00e9n\u00e9ral, et l'abb\u00e9 Christophe de Coulanges ; Paris, 8 f\u00e9v. 1644 et 30 janv 1645, 3. p. 1/2 in-4. Tach\u00e9e d'humidit\u00e9 et raccommod\u00e9e. Tr\u00e8s-rare.",
+                    "id": "CAT_000107_e180_d1"
+                },
+                {
+                    "price": 200.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1644",
+                    "number_of_pages": 3.5,
+                    "format": 4,
+                    "term": 4,
+                    "sell_date": "1888-12",
+                    "desc": "P. s., sign\u00e9e aussi par son mari Henri, marquis de Sevign\u00e9, Marie de L. a. Croix, veuve de Gabriel de Gu\u00e9n\u00e9gaud. Claude de Gu\u00e9n\u00e9gaud, tr\u00e9sorier du Roi, Phitippe de Coulanges (oncle de Madame de S\u00e9vign\u00e9), L\u00e9onor de Rabutin, comte de Bussy, lieutenant-g\u00e9n\u00e9ral, et l'abb\u00e9 Christophe de Coulanges; Paris, 8 f\u00e9v. 1644 et 30 janvier 1645, 3 p. 1/2 in-4. Tach\u00e9e d'humidit\u00e9 et raccommod\u00e9e. Tr\u00e8s-rare",
+                    "id": "CAT_000120_e249_d1"
+                },
+                {
+                    "price": 150.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1644",
+                    "number_of_pages": 3.5,
+                    "format": 4,
+                    "term": 4,
+                    "sell_date": "1894-02",
+                    "desc": "Pi\u00e8ce sig., sign\u00e9e aussi par son mari Henri, marquis de S\u00e9cign\u00e9, Marie de la Croix, veuve de Gabriel de Gu\u00e9n\u00e9gaud, Claude de Gu\u00e9n\u00e9gaud, tr\u00e9sorier du Roi, Philippe de Coulanges (oncle de Madame de S\u00e9vign\u00e9), L\u00e9onor de Rabutin, comte de Bussy, lieutenant-g\u00e9neral, et l'abb\u00e9 Christophe de Coulanges; Paris, 8 f\u00e9v. 1644 et 30 janvier 1645, 3 p. 1/2 in-4. Tach\u00e9e d'humidit\u00e9 et raccommod\u00e9e. Tr\u00e8s rare.",
+                    "id": "CAT_000173_e252_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000107_e180_d1",
+                    "CAT_000100_e280_d1",
+                    1.4999999999999998
+                ],
+                [
+                    "CAT_000120_e249_d1",
+                    "CAT_000173_e252_d1",
+                    1.2999999999999998
+                ],
+                [
+                    "CAT_000120_e249_d1",
+                    "CAT_000107_e180_d1",
+                    0.8999999999999999
+                ],
+                [
+                    "CAT_000120_e249_d1",
+                    "CAT_000100_e280_d1",
+                    0.8999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 35.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1679",
+                    "number_of_pages": 14.0,
+                    "format": 4,
+                    "term": null,
+                    "sell_date": "1881-10",
+                    "desc": "1\u00b0 Acte sur v\u00e9lin relatif \u00e0 la succession du pr\u00e9sident Fr\u00e9myot, 1679, 14 p. in-4. Le nom de Mme de S\u00e9vign\u00e9 se trouve mentionn\u00e9 deux fois comme h\u00e9riti\u00e8re pour une part du pr\u00e9sident Fr\u00e9myot. On remarque aussi les noms de Fran\u00e7oise de Rabutin-Chantal, fille de Sainte-Chantal et veuve d'\u00c2ntoine de Toulongeon ; Jean de Barbisey, le pr\u00e9sident Baillet, etc.",
+                    "id": "CAT_000057_e81_d1"
+                },
+                {
+                    "price": 25.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1679",
+                    "number_of_pages": 14.0,
+                    "format": 4,
+                    "term": null,
+                    "sell_date": "1884-11",
+                    "desc": "1\u00b0 Acte sur v\u00e9lin relatif \u00e0 la succession du pr\u00e9sident Fr\u00e9myot, 1679, 14 p. in-4. Le nom de Mme de S\u00e9vign\u00e9 se trouve mentionn\u00e9 deux fois comme h\u00e9riti\u00e8re pour une part du pr\u00e9sident Fr\u00e9myot. On remarque aussi les noms de Fran\u00e7oise de Rabutin-Chantal, fille de sainte Chantal et veuve d'Antoine de Toulong\u00e9on ; Jean de Berbisey, le pr\u00e9sident Baillet, etc",
+                    "id": "CAT_000073_e36_d2"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000073_e36_d2",
+                    "CAT_000057_e81_d1",
+                    1.2999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 35.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1701",
+                    "number_of_pages": 1.0,
+                    "format": 4,
+                    "term": 9,
+                    "sell_date": "1881-10",
+                    "desc": "2\u00b0 Let. sig. du duc du Maine \u00e0 Mlle de S\u00e9vign\u00e9, 1701, 1 p. in-4, cachet. Piq\u00fbre d'humidit\u00e9 dans la marge.",
+                    "id": "CAT_000057_e81_d2"
+                },
+                {
+                    "price": 25.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1701",
+                    "number_of_pages": 1.0,
+                    "format": 4,
+                    "term": 9,
+                    "sell_date": "1884-11",
+                    "desc": "2\u00b0 Let. sig. du duc du Maine \u00e0 Mlle de S\u00e9vign\u00e9, 1701, 1 p. in-4, cachet. Piq\u00fbre d'humidit\u00e9 dans la marge.",
+                    "id": "CAT_000073_e36_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000073_e36_d1",
+                    "CAT_000057_e81_d2",
+                    1.2999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 35.0,
+                    "author": "Lorraine",
+                    "date": "1519-11-06",
+                    "number_of_pages": null,
+                    "format": null,
+                    "term": 4,
+                    "sell_date": "1891-05",
+                    "desc": "Pi\u00e8ce sig. sur v\u00e9lin ; Bar, 6 nov. 1519, obl.",
+                    "id": "CAT_000140_e96_d1"
+                },
+                {
+                    "price": 25.0,
+                    "author": "Lorraine",
+                    "date": "1519-11-06",
+                    "number_of_pages": null,
+                    "format": 104,
+                    "term": 4,
+                    "sell_date": "1895-03",
+                    "desc": "Pi\u00e8ce sig. sur v\u00e9lin; Bar, 6 nov. 1519, in-4 obl. Rare.",
+                    "id": "CAT_000226_e168_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000140_e96_d1",
+                    "CAT_000226_e168_d1",
+                    1.0999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 16.0,
+                    "author": "Aubign\u00e9",
+                    "date": "1636-10-13",
+                    "number_of_pages": 1.0,
+                    "format": 118,
+                    "term": 2,
+                    "sell_date": "1890-04",
+                    "desc": "Pi\u00e8ce aut. sig., sign\u00e9e aussi par sa femme, n\u00e9e de Cardilhac ; conciergerie de Niort, 13 octobre 1636, 1 p. in-18 obl.",
+                    "id": "CAT_000130_e18_d1"
+                },
+                {
+                    "price": 12.0,
+                    "author": "Aubign\u00e9",
+                    "date": "1636-10-13",
+                    "number_of_pages": 1.0,
+                    "format": 108,
+                    "term": 2,
+                    "sell_date": "1896-03",
+                    "desc": "Pi\u00e8ce aut. sig., sig. aussi par sa femme, n\u00e9e de Cardilhac ; conciergerie de Niort, 13 oct. 1636, 1 p. in-8 obl.",
+                    "id": "CAT_000236_e12_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000130_e18_d1",
+                    "CAT_000236_e12_d1",
+                    1.0999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 12.0,
+                    "author": "Joyant",
+                    "date": "1826",
+                    "number_of_pages": null,
+                    "format": 108,
+                    "term": null,
+                    "sell_date": "1880-07",
+                    "desc": "Int\u00e9rieur de cour, \u00e0 Chaumont, dessin au crayon, sign\u00e9, 1826, gr. in-8 obl.",
+                    "id": "CAT_000051_e111_d1"
+                },
+                {
+                    "price": 15.0,
+                    "author": "Joyant",
+                    "date": "1826",
+                    "number_of_pages": null,
+                    "format": 104,
+                    "term": null,
+                    "sell_date": "1886-05",
+                    "desc": "Int\u00e9rieur de cour \u00e0 Chaumont (Haute-Marne), dessin au crayon sig., 1826, in-4 obl.",
+                    "id": "CAT_000102_e265_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000102_e265_d1",
+                    "CAT_000051_e111_d1",
+                    1.0999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 4.0,
+                    "author": "Reclus",
+                    "date": "1869",
+                    "number_of_pages": 1.0,
+                    "format": 8,
+                    "term": 7,
+                    "sell_date": "1876-07",
+                    "desc": "L. a. s. \u00e0 M. Danzin, 1869, 1 p. in-8.",
+                    "id": "CAT_000038_e176_d1"
+                },
+                {
+                    "price": 4.0,
+                    "author": "Reclus",
+                    "date": "1869",
+                    "number_of_pages": 1.0,
+                    "format": null,
+                    "term": 7,
+                    "sell_date": "1893-02",
+                    "desc": "L. a. s., 1869, 1 p. i-8. Curieuse,",
+                    "id": "CAT_000174_e241_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000174_e241_d1",
+                    "CAT_000038_e176_d1",
+                    1.0999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 35.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1644",
+                    "number_of_pages": 12.0,
+                    "format": 4,
+                    "term": 2,
+                    "sell_date": "1881-10",
+                    "desc": "3\u00b0 Pi\u00e8ce sur v\u00e9lin avec 5 lig. aut. sig. d'Anne de S\u00e9vign\u00e9; L. a. Gailleule, 1644, 12 p. in-4.",
+                    "id": "CAT_000057_e81_d3"
+                },
+                {
+                    "price": 25.0,
+                    "author": "S\u00e9vign\u00e9",
+                    "date": "1644",
+                    "number_of_pages": 12.0,
+                    "format": 4,
+                    "term": 2,
+                    "sell_date": "1884-11",
+                    "desc": "3\u00b0 Pi\u00e8ce sur v\u00e9lin avec 5 lig. aut. sig. d'Anne de S\u00e9vign\u00e9; L. a. Gailleule, 1644, 12 p. in-4.-4\u00b0 3 let. aut. sig. de Mme la comtesse de Sainte-Agathe, derni\u00e8re descendante de Mme de S\u00e9vign\u00e9, etc.",
+                    "id": "CAT_000073_e36_d3"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000073_e36_d3",
+                    "CAT_000057_e81_d3",
+                    1.0999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 12.0,
+                    "author": "H\u00e9rault",
+                    "date": "1791",
+                    "number_of_pages": 1.0,
+                    "format": 4,
+                    "term": 9,
+                    "sell_date": "1892-05",
+                    "desc": "Let. sig.; Paris, 18mai (1791), 1 p. in-4.",
+                    "id": "CAT_000148_e270_d1"
+                },
+                {
+                    "price": null,
+                    "author": "H\u00e9rault",
+                    "date": "1791",
+                    "number_of_pages": 1.0,
+                    "format": 1,
+                    "term": 9,
+                    "sell_date": "1893-02",
+                    "desc": "Let. sig. ; Paris, 18 mai (1791), 1 p. in-fol. Un peu tach\u00e9e.",
+                    "id": "CAT_000330_e154_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000148_e270_d1",
+                    "CAT_000330_e154_d1",
+                    0.8999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 2.0,
+                    "author": "S\u00e9nard",
+                    "date": "1849",
+                    "number_of_pages": 1.0,
+                    "format": 8,
+                    "term": 7,
+                    "sell_date": "1871-07",
+                    "desc": "L. a. s., 1849, 1 p. in-8.",
+                    "id": "CAT_000083_e200_d1"
+                },
+                {
+                    "price": 10.0,
+                    "author": "L\u00e9onard",
+                    "date": "1849",
+                    "number_of_pages": 1.0,
+                    "format": 8,
+                    "term": 7,
+                    "sell_date": "1888-02",
+                    "desc": "L. a. s.; Bruxelles, 1849, 1 p. in-8.",
+                    "id": "CAT_000114_e206_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000114_e206_d1",
+                    "CAT_000083_e200_d1",
+                    1.2999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 40.0,
+                    "author": "8and",
+                    "date": "1840",
+                    "number_of_pages": 3.0,
+                    "format": 18,
+                    "term": 8,
+                    "sell_date": "1890-03",
+                    "desc": "Let. aut. \u00e0 Mme Allart; (Paris, 1840), 3 p. in-18.",
+                    "id": "CAT_000129_e150_d1"
+                },
+                {
+                    "price": 25.0,
+                    "author": "Sand",
+                    "date": "1840",
+                    "number_of_pages": 3.0,
+                    "format": 8,
+                    "term": 8,
+                    "sell_date": "1896-05",
+                    "desc": "Let. aut. \u00e0 Mme Allart; (Paris, 1840), 3 p. in-8.",
+                    "id": "CAT_000238_e239_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000238_e239_d1",
+                    "CAT_000129_e150_d1",
+                    1.0999999999999999
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": null,
+                    "author": "SEVIGNE",
+                    "date": "1691",
+                    "number_of_pages": null,
+                    "format": null,
+                    "term": null,
+                    "sell_date": "1926",
+                    "desc": "Full A. L., unsigned as usual, 4 pp., 4zo. Au Rochers dimanche 20 aout [about 1691]. Autograph cover addressed to Monsieur du Plessis.",
+                    "id": "CAT_000007_e108_d1"
+                },
+                {
+                    "price": null,
+                    "author": "S\u00c9VIGN\u00c9",
+                    "date": "1691",
+                    "number_of_pages": null,
+                    "format": null,
+                    "term": null,
+                    "sell_date": "1918",
+                    "desc": "A. L. 3 1/2 pp. 4to, \"\u00e0 Grignan, ce 19e janvier, 1691,\" to the same:",
+                    "id": "CAT_000012_e1080_d2"
+                },
+                {
+                    "price": null,
+                    "author": "S\u00c9VIGN\u00c9",
+                    "date": "1691",
+                    "number_of_pages": null,
+                    "format": null,
+                    "term": null,
+                    "sell_date": "1918",
+                    "desc": "A. L. 5 pp. 4to, \"\u00e0 Grignan, ce 15e Septembre\" (1691), to the same:",
+                    "id": "CAT_000012_e1081_d2"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000012_e1080_d2",
+                    "CAT_000007_e108_d1",
+                    1.2999999999999998
+                ],
+                [
+                    "CAT_000012_e1081_d2",
+                    "CAT_000007_e108_d1",
+                    1.2999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": null,
+                    "author": "Dumas fils",
+                    "date": "1831",
+                    "number_of_pages": 1.0,
+                    "format": 8,
+                    "term": 7,
+                    "sell_date": "1886-01",
+                    "desc": "L. a. s. \u00e0 Mme Dumas, veuve du g\u00e9n\u00e9ral; (1831), 1 p. in-8.",
+                    "id": "CAT_000099_e85_d1"
+                },
+                {
+                    "price": 40.0,
+                    "author": "Dumas",
+                    "date": "1831",
+                    "number_of_pages": 1.0,
+                    "format": 8,
+                    "term": 7,
+                    "sell_date": "1889-03",
+                    "desc": "L. a. s. \u00e0 Mme Dumas, veuve du g\u00e9n\u00e9ral (1831), 1 p. in-8.",
+                    "id": "CAT_000122_e62_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000122_e62_d1",
+                    "CAT_000099_e85_d1",
+                    1.2999999999999998
+                ]
+            ]
+        },
+        {
+            "mss": [
+                {
+                    "price": 15.0,
+                    "author": "Philipon de la Madeleine",
+                    "date": "1761-05-09",
+                    "number_of_pages": 2.0,
+                    "format": 4,
+                    "term": 7,
+                    "sell_date": "1886-11",
+                    "desc": "L. a. s. (\u00e0 un membre de l'Acad\u00e9mie fran\u00e7aise) : Lyon, 9 mai 1761, 2 p. in-4.",
+                    "id": "CAT_000104_e181_d1"
+                },
+                {
+                    "price": 10.0,
+                    "author": "Philipon",
+                    "date": "1761-05-09",
+                    "number_of_pages": 2.0,
+                    "format": 4,
+                    "term": 7,
+                    "sell_date": "1895-02",
+                    "desc": "L. a. s. (\u00e0 un membre de l'Acad\u00e9mie fran\u00e7aise); Lyon, 9 mai 1761, 2 p. in-4.",
+                    "id": "CAT_000225_e197_d1"
+                }
+            ],
+            "scores": [
+                [
+                    "CAT_000104_e181_d1",
+                    "CAT_000225_e197_d1",
+                    1.2999999999999998
+                ]
+            ]
+        }
+    ],
+    "single_sale": [
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1690",
+            "number_of_pages": null,
+            "format": null,
+            "term": null,
+            "sell_date": "1918",
+            "desc": "A. L. 4 pp. 4to (conclusion wanting?), \"aux Rochers, mercredi, 19e juillet\" (1690) to the same, speaking of the death of Beaulieu, her ma\u00eetre d'h\u00f4tel: \u2013",
+            "id": "CAT_000012_e1079_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1690",
+            "number_of_pages": null,
+            "format": null,
+            "term": null,
+            "sell_date": "1918",
+            "desc": "A. L. 3 1/4 pp. 4to, \"aux Rochers, mercredy, 30e aoust\" (1690), to the same:\u2013",
+            "id": "CAT_000012_e1080_d1"
+        },
+        {
+            "price": 12.0,
+            "author": "Philipon",
+            "date": "1851-08-18",
+            "number_of_pages": 1.0,
+            "format": 8,
+            "term": 7,
+            "sell_date": null,
+            "desc": "L. a. s. comme directeur du Journal pour rire \u00e0 M. Sar-raus ; 18 ao\u00fbt 1851; 1 p. in-8.",
+            "id": "CAT_000006_e328_d1"
+        },
+        {
+            "price": 500.0,
+            "author": "S\u00e9vign\u00e9",
+            "date": null,
+            "number_of_pages": 5.0,
+            "format": 8,
+            "term": 8,
+            "sell_date": "1892-10",
+            "desc": "Let. aut. \u00e0 la comtesse de Guitaut; mercredi des cendres, 5 pages in-8, traces de cachet.",
+            "id": "CAT_000151_e295_d1"
+        },
+        {
+            "price": 30.0,
+            "author": "S\u00e9vign\u00e9",
+            "date": "1658-05-03",
+            "number_of_pages": 3.0,
+            "format": 1,
+            "term": null,
+            "sell_date": "1890-06",
+            "desc": "Pi\u00e8ce sur v\u00e9lin ; Paris, 3 mai 1658, 3 p. in-fol. L\u00e9g\u00e8re d\u00e9chirure.",
+            "id": "CAT_000132_e346_d1"
+        },
+        {
+            "price": 20.0,
+            "author": "S\u00e9vign\u00e9",
+            "date": "1680",
+            "number_of_pages": 2.0,
+            "format": 4,
+            "term": null,
+            "sell_date": "1890-06",
+            "desc": "Pi\u00e8ce originale 30 juin 1680, 2 p. in-4.",
+            "id": "CAT_000132_e347_d1"
+        },
+        {
+            "price": 225.0,
+            "author": "S\u00e9vign\u00e9",
+            "date": "1650-05-17",
+            "number_of_pages": 8.0,
+            "format": 1,
+            "term": 4,
+            "sell_date": "1889-02",
+            "desc": "Pi\u00e8ce sig. 2 fois, sig. aussi par son mari, le marquis de S\u00e9vign\u00e9; Paris, 17 mai 1650, 8 p. in-fol. Tr\u00e8s-rare.",
+            "id": "CAT_000121_e199_d1"
+        },
+        {
+            "price": 12.0,
+            "author": "S\u00e9vign\u00e9",
+            "date": "1671",
+            "number_of_pages": null,
+            "format": 104,
+            "term": 2,
+            "sell_date": "1893-02",
+            "desc": "Pi\u00e8ce aut. sig. sur v\u00e9lin; 1671, in-4 obl. Encre un peu p\u00e2le.",
+            "id": "CAT_000329_e254_d1"
+        },
+        {
+            "price": 35.0,
+            "author": "S\u00e9vign\u00e9",
+            "date": null,
+            "number_of_pages": null,
+            "format": null,
+            "term": 15,
+            "sell_date": "1881-10",
+            "desc": "4\u00b0 3 let. aut. sig. de Mme la comtesse de Sainte-Agathe, derni\u00e8re descendante de Mme de S\u00e9vign\u00e9, etc.",
+            "id": "CAT_000057_e81_d4"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1690",
+            "number_of_pages": 3.25,
+            "format": 8,
+            "term": 8,
+            "sell_date": "1932",
+            "desc": "L. a. \u00e0 M. Duplessis; les Rochers, 30 ao\u00fbt (1690), 3 p. 1/4 in-8. L\u00e9gers raccomodages.",
+            "id": "CAT_000009_e1113_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": null,
+            "number_of_pages": 4.0,
+            "format": 4,
+            "term": 8,
+            "sell_date": "1932",
+            "desc": "L. a. \u00e0 M. Duplessis; les Rochers, dimanche 20 ao\u00fbt, 4 p. in-4.",
+            "id": "CAT_000009_e1114_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1691-01-19",
+            "number_of_pages": 3.5,
+            "format": 8,
+            "term": 8,
+            "sell_date": "1932",
+            "desc": "L. a. \u00e0 M. Du Plessis; Grignan, 19 janvier 1691, 3 p. 1/2 in-8.",
+            "id": "CAT_000009_e1115_d1"
+        },
+        {
+            "price": null,
+            "author": "SEVIGNE",
+            "date": "1695-06-05",
+            "number_of_pages": null,
+            "format": 8,
+            "term": 8,
+            "sell_date": "1949",
+            "desc": "L. aut., au pr\u00e9sident de Moulceau, Grignan, 5 juin 1695. 4 pp. 1/4 in-8.",
+            "id": "CAT_000015_e94_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1690",
+            "number_of_pages": 4.0,
+            "format": 4,
+            "term": 15,
+            "sell_date": "1927",
+            "desc": "Lettres autographes n.s. \u00e0 M. du Plessis. Aux Rochers, dimanche 20 aoust (1690), 4 pages in-4, avec suscription (voir reproduction, page 61).",
+            "id": "CAT_000010_e171_d1"
+        },
+        {
+            "price": 162.5,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": null,
+            "number_of_pages": 3.0,
+            "format": 4,
+            "term": 7,
+            "sell_date": "1871",
+            "desc": "L. a. s. \u00e0 M. de Lamoignon, \u00e0 Paris; aux Rochers, dimanche 27 ao\u00fbt, 3 p. in-4, cachet bris\u00e9.",
+            "id": "CAT_000017_e126_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1689",
+            "number_of_pages": null,
+            "format": null,
+            "term": null,
+            "sell_date": "1918",
+            "desc": "A.L. 3 1/2 pp. 4to, \"aux Rochers, dimanche, 26e de juin\" (1689), M. du Plessis:",
+            "id": "CAT_000012_e1078_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1690",
+            "number_of_pages": null,
+            "format": null,
+            "term": null,
+            "sell_date": "1918",
+            "desc": "A. L. 3 pp. 4to, \"Rochers, mercredi, 4e juin\" (1690) to the same, with seal",
+            "id": "CAT_000012_e1078_d2"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1690",
+            "number_of_pages": null,
+            "format": null,
+            "term": null,
+            "sell_date": "1918",
+            "desc": "A. L. 4 pp. 4to, \"aux Rochers, mercredi, 20e aoust\" (1690) to the same:",
+            "id": "CAT_000012_e1079_d2"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1691",
+            "number_of_pages": null,
+            "format": null,
+            "term": 8,
+            "sell_date": "1918",
+            "desc": "A. L. s. \"L. a. M. de S\u00e9vign\u00e9\", 5 pp. 4to, \"\u00e0 Grignan, ce premier may\" (1691), to the same:",
+            "id": "CAT_000012_e1081_d1"
+        },
+        {
+            "price": 100.0,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": null,
+            "number_of_pages": 1.0,
+            "format": 4,
+            "term": null,
+            "sell_date": "1919-04",
+            "desc": "Fin de lettre aut. \u00e0 M. du Plessis, 1 p. in-4, adresse.",
+            "id": "CAT_000003_e88169_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": null,
+            "number_of_pages": null,
+            "format": 4,
+            "term": 8,
+            "sell_date": "1935",
+            "desc": "L. a. \u00e0 M. Duplessis. Les Rochers, dimanche 20 ao\u00fbt, 4 pp. in-4",
+            "id": "CAT_000008_e230_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1670",
+            "number_of_pages": null,
+            "format": null,
+            "term": null,
+            "sell_date": "1904",
+            "desc": "A.L. 4 1/2 pp. 4to, 19 Nov. (1670), EXTREMELY RARE,",
+            "id": "CAT_000014_e26_d1"
+        },
+        {
+            "price": null,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1689",
+            "number_of_pages": 3.5,
+            "format": 4,
+            "term": 8,
+            "sell_date": "1923",
+            "desc": "L. aut. \u00e0 M. Du Plessis; aux Rochers, 26 juin (1689), 3 p. 1/2 in-4, coup\u00e9e dans les plis.",
+            "id": "CAT_000013_e268_d1"
+        },
+        {
+            "price": null,
+            "author": "SEVIGNE",
+            "date": null,
+            "number_of_pages": null,
+            "format": 4,
+            "term": null,
+            "sell_date": null,
+            "desc": "4 pp. pet. in-4. tr\u00e8s rare.",
+            "id": "CAT_000007_e279_d1"
+        },
+        {
+            "price": 162.5,
+            "author": "S\u00c9VIGN\u00c9",
+            "date": "1695-06-05",
+            "number_of_pages": 4.5,
+            "format": 4,
+            "term": 7,
+            "sell_date": "1919",
+            "desc": "L. a. s.; Grignan, 5 juin 1695, 4 p. 1/2 in-4. Rare,",
+            "id": "CAT_000016_e89531_d1"
+        },
+        {
+            "price": 22.0,
+            "author": "Artaignan",
+            "date": "1676",
+            "number_of_pages": 1.0,
+            "format": 108,
+            "term": 2,
+            "sell_date": "1889-05",
+            "desc": "Pi\u00e8ce aut. sig.; 1676, 1 p. in-8 obl.",
+            "id": "CAT_000124_e8_d1"
+        },
+        {
+            "price": 10.0,
+            "author": "Grignan",
+            "date": "1676",
+            "number_of_pages": 1.0,
+            "format": 108,
+            "term": 4,
+            "sell_date": "1892-05",
+            "desc": "Pi\u00e8ce sig. sur v\u00e9lin; 1676, 1 p. in-8 obl.",
+            "id": "CAT_000148_e98_d1"
+        }
+    ]
+}

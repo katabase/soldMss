@@ -89,21 +89,21 @@ class Clustering(unittest.TestCase):
                         }
                     ],
                     "scores": [
-                        (
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000002_e1_d1",
-                            1.2
-                        ),
-                        (
+                            1.4999999999999998
+                        ],
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000003_e1_d1",
-                            1.2
-                        ),
-                        (
+                            1.4999999999999998
+                        ],
+                        [
                             "CAT_000002_e1_d1",
                             "CAT_000003_e1_d1",
-                            1.2
-                        )
+                            1.4999999999999998
+                        ]
                     ]
                 }
             ],
@@ -241,11 +241,11 @@ class Authors(unittest.TestCase):
                         }
                     ],
                     "scores": [
-                        (
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000002_e1_d1",
-                            1.2
-                        )
+                            1.4999999999999998
+                        ]
                     ]
                 }
             ],
@@ -505,11 +505,11 @@ class Missing_param(unittest.TestCase):
                         }
                     ],
                     "scores": [
-                        (
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000002_e1_d1",
-                            0.9999999999999999
-                        )
+                            1.2999999999999998
+                        ]
                     ]
                 }
             ],
@@ -578,11 +578,11 @@ class Missing_param(unittest.TestCase):
                         }
                     ],
                     "scores": [
-                        (
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000002_e1_d1",
-                            0.6
-                        )
+                            0.8
+                        ]
                     ]
                 }
             ],
@@ -651,11 +651,11 @@ class Missing_param(unittest.TestCase):
                         }
                     ],
                     "scores": [
-                        (
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000002_e1_d1",
-                            0.9
-                        )
+                            0.8999999999999999
+                        ]
                     ]
                 }
             ],
@@ -724,11 +724,11 @@ class Missing_param(unittest.TestCase):
                         }
                     ],
                     "scores": [
-                        (
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000002_e1_d1",
-                             0.6999999999999998
-                        )
+                             1.2999999999999998
+                        ]
                     ]
                 }
             ],
@@ -797,11 +797,11 @@ class Missing_param(unittest.TestCase):
                         }
                     ],
                     "scores": [
-                        (
+                        [
                             "CAT_000001_e1_d1",
                             "CAT_000002_e1_d1",
-                            0.9999999999999999
-                        )
+                            1.2999999999999998
+                        ]
                     ]
                 }
             ],
@@ -811,11 +811,29 @@ class Missing_param(unittest.TestCase):
         self.assertDictEqual(output_test, test_dict)
 
 
-#class Evaluating_scores(unittest.TestCase):
-    #maxDiff = None
+class Evaluating_scores(unittest.TestCase):
+    maxDiff = None
 
-    #def test_scores(self):
+    def test_scores(self):
+        input = "json_test/input.json"
+        actual_path = os.path.dirname(os.path.abspath(__file__))
+        input_json = os.path.join(actual_path, input)
 
+        output = "json_test/output.json"
+        output_json = os.path.join(actual_path, output)
+
+        with open(input_json, 'r') as input:
+            input_to_test = json.load(input)
+        
+            output_test = reconciliator(input_to_test)
+        
+        output = "json_test/output.json"
+        output_json = os.path.join(actual_path, output)
+
+        with open(output_json, 'r') as output:
+            test_dict = json.load(output)
+
+        self.assertDictEqual(output_test, test_dict)
 
 
 if __name__ == "__main__":
