@@ -53,17 +53,15 @@ def to_edges(l):
         last = current
 
 
-id_reg = re.compile("CAT_[0-9]+")
-
-def validate_id(id):
-    """
-    This function verifies that the id matches predefined filenames for security reasons.
-    :param id: an id to be validate.
-    :return: the validated id.
-    """
-    # Each file starts with 'CAT_' and digits.
-    good_id = id_reg.match(id)
-    return good_id[0]
+#def validate_id(id):
+#    """
+# This function verifies that the id matches predefined filenames for security reasons.
+    #:param id: an id to be validate.
+    #:return: the validated id.
+    #"""
+   # # Each file starts with 'CAT_' and digits.
+    #splited_id = id.split("_", 2)
+    #return splited_id[1]
 
 
 def similarity_score(desc_a, desc_b):
@@ -75,32 +73,26 @@ def similarity_score(desc_a, desc_b):
     """
 
     score = 0
-    if  desc_a["term"] == desc_b["term"]:
-        score = score + 0.2
+    if desc_a["term"] == desc_b["term"]:
+        score = score + 0.3
     else:
-        score = score - 0.1
+        score = score - 0.3
 
-    if  desc_a["date"] == desc_b["date"]and desc_b["date"] is not None:
-        score = score + 0.5
+    if desc_a["date"] == desc_b["date"] and desc_b["date"] is not None:
+        score = score + 0.6
     else:
         score = score - 0.1
 
     if  desc_a["number_of_pages"] == desc_b["number_of_pages"]:
-        score = score + 0.1
-    else:
-        score = score - 0.1
+        score = score + 0.2
 
     if  desc_a["format"] == desc_b["format"]:
-        score = score + 0.3
-    else:
-        score = score - 0.2
+        score = score + 0.2
 
     if  desc_a["price"] == desc_b["price"]:
-        score = score + 0.1
-    else:
-        score = score - 0.1
+        score = score + 0.2
 
-    if score >= 0.5 and similar(desc_b["desc"], desc_a["desc"]) <= 0.75:
+    if score >= 0.6 and similar(desc_b["desc"], desc_a["desc"]) <= 0.8:
         score = score - 0.2
 
     return score
@@ -118,11 +110,12 @@ def double_loop(input_dict):
     items = list(input_dict.items())
     for i in tqdm.tqdm(range(len(items))):
         id_a, desc_a = items[i]
-        CAT_id_a = validate_id(id_a)
+        # We only keep the id of the catalogue : "CAT_000001_e1_d1" becomes "000001"
+        CAT_id_a = id_a.split("_", 2)[1]
         # We can pass items from 0 to i since we already have processed it.
         for j in range(i + 1, len(items)):
             id_b, desc_b = items[j]
-            CAT_id_b = validate_id(id_b)
+            CAT_id_b = id_b.split("_", 2)[1]
             # To compare two entries of a same catalogue makes no sense.
             if CAT_id_a == CAT_id_b:
                 continue
@@ -131,11 +124,11 @@ def double_loop(input_dict):
             score_entry = {}
             score_entry["score"] = similarity_score(desc_a, desc_b)
 
-            if score_entry["score"] <= 0.5:
+            if score_entry["score"] <= 0.7:
                 continue
 
             # If there is a strong possibility that autors are not the same, we simply pass.
-            if desc_b["author"] and desc_a["author"] and similar(desc_b["author"], desc_a["author"]) < 0.75:
+            if desc_b["author"] and desc_a["author"] and similar(desc_b["author"], desc_a["author"]) < 0.5:
                 continue
 
             try:
@@ -166,7 +159,7 @@ def double_loop(input_dict):
     for (desc_a, desc_b), score in filtered_list_with_score:
     	if desc_a not in desc_score:
     		desc_score[desc_a] = []
-    	desc_score[desc_a].append((desc_a, desc_b, score))
+    	desc_score[desc_a].append([desc_a, desc_b, score])
 
     # Now let's create the clusters. We transform the list of pairs into a graph. The connected nodes are our clusters !
     # See https://stackoverflow.com/a/4843408
@@ -245,6 +238,6 @@ if __name__ == "__main__":
         all_data = json.load(data)
         results = reconciliator(all_data)
 
-    with open('../output/reconciliated2.json', 'w+') as outfile:
+    with open('../output/reconciliated3.json', 'w+') as outfile:
         outfile.truncate(0)
         json.dump(results, outfile)
