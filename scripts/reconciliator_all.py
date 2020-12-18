@@ -53,17 +53,6 @@ def to_edges(l):
         last = current
 
 
-#def validate_id(id):
-#    """
-# This function verifies that the id matches predefined filenames for security reasons.
-    #:param id: an id to be validate.
-    #:return: the validated id.
-    #"""
-   # # Each file starts with 'CAT_' and digits.
-    #splited_id = id.split("_", 2)
-    #return splited_id[1]
-
-
 def similarity_score(desc_a, desc_b):
     """
     This function calculates the similarity score between two descs.
@@ -73,26 +62,32 @@ def similarity_score(desc_a, desc_b):
     """
 
     score = 0
-    if desc_a["term"] == desc_b["term"]:
+    if  desc_a["term"] == desc_b["term"]:
         score = score + 0.3
     else:
-        score = score - 0.3
+        score = score - 0.1
 
-    if desc_a["date"] == desc_b["date"] and desc_b["date"] is not None:
-        score = score + 0.6
+    if  desc_a["date"] == desc_b["date"]and desc_b["date"] is not None:
+        score = score + 0.5
     else:
         score = score - 0.1
 
     if  desc_a["number_of_pages"] == desc_b["number_of_pages"]:
-        score = score + 0.2
+        score = score + 0.1
+    else:
+        score = score - 0.1
 
     if  desc_a["format"] == desc_b["format"]:
         score = score + 0.2
+    else:
+        score = score - 0.1
 
     if  desc_a["price"] == desc_b["price"]:
-        score = score + 0.2
+        score = score + 0.1
+    else:
+        score = score - 0.1
 
-    if score >= 0.6 and similar(desc_b["desc"], desc_a["desc"]) <= 0.8:
+    if score >= 0.5 and similar(desc_b["desc"], desc_a["desc"]) <= 0.75:
         score = score - 0.2
 
     return score
@@ -123,12 +118,12 @@ def double_loop(input_dict):
             # This dict will contain the score and the author distance.
             score_entry = {}
             score_entry["score"] = similarity_score(desc_a, desc_b)
-
-            if score_entry["score"] <= 0.7:
+            
+            if score_entry["score"] <= 0.5:
                 continue
 
             # If there is a strong possibility that autors are not the same, we simply pass.
-            if desc_b["author"] and desc_a["author"] and similar(desc_b["author"], desc_a["author"]) < 0.5:
+            if desc_b["author"] and desc_a["author"] and similar(desc_b["author"], desc_a["author"]) < 0.75:
                 continue
 
             try:
@@ -238,6 +233,6 @@ if __name__ == "__main__":
         all_data = json.load(data)
         results = reconciliator(all_data)
 
-    with open('../output/reconciliated3.json', 'w+') as outfile:
+    with open('../output/reconciliated.json', 'w+') as outfile:
         outfile.truncate(0)
         json.dump(results, outfile)
