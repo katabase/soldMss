@@ -47,6 +47,13 @@ python3 mss_list.py
 
 All the results will be in the `output`folder.
 
+### Tests
+
+You can test the script with :
+```bash
+python3 test.py
+```
+
 ## Credits
 
 * The scripts were created by Alexandre Bartz and Matthias Gille Levenson with the help of Simon Gabay.
